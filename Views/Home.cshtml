@@ -1,0 +1,8 @@
+﻿@model TextFilter.Models.TextModel
+
+@using (Html.BeginForm("Submit", "Home", FormMethod.Post))
+{
+    @Html.TextBoxFor(model => model.userIn)
+    @Html.ValidationMessageFor(model => model.userIn)
+    <button type="submit">submit</button>
+}

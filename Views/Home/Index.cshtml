@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p>Please enter the text</p>
+
+    @model TextFilter.Models.TextModel
+
+    @using (Html.BeginForm("Textprocessing", "Home", FormMethod.Post))
+    {
+        @Html.TextBoxFor(model => model.userIn)
+        @Html.ValidationMessageFor(model => model.userIn)
+        <button type="submit">submit</button>
+    }
+
+
+</div>
